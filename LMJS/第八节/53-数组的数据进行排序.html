@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>数组的数据进行排序</title>
+</head>
+<body>
+    <script>
+        // 数组的数据进行排序
+        var t = [50,21,15,3,65,999,111,120,114];
+
+        console.log(t);
+
+        // t.sort()
+        t.sort(function(a,b){
+            return a - b;
+        });
+
+        console.log(t);
+    </script>
+</body>
+</html>

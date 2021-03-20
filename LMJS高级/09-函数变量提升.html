@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>函数变量提升</title>
+</head>
+<body>
+    <script>
+        var a = 10;  //全局变量，全局皆可访问
+
+        // 先执行f1函数，然后再定义f1函数的内容,函数也可以提升
+        f1();
+
+        function f1() {
+            console.log(a); // undefined
+            // 函数的变量提升：因为在函数执行前，先创建了函数的ec，在创建ec的时候已经把函数里面的声明的变量初始化为了undefined
+            var a = 19;
+
+            console.log(a);  // 19
+            
+            // 特殊情况：变量声明和函数声明 同事拥有一个名字的时候，函数优先级更高
+            console.log(b);  // function
+    
+            var b = 9; // 因为js是动态语言，把b重新赋值9，把之前的function覆盖
+            function b() {
+    
+            }
+    
+            console.log(b); // 9
+        }
+        
+        console.log(a);  // 10
+
+    </script>
+</body>
+</html>

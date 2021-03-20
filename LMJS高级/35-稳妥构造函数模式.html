@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>稳妥构造函数模式</title>
+</head>
+<body>
+    <script>
+        function Cat() {
+            var o = {};
+            o.age = 10;
+            o.name = 'laozhang';
+            o.run = function() {
+                console.log(o.name + '  is running.');
+            };
+            return o;  //如果是构造函数执行模式，返回的是一个引用类型，就把引用类型返回；  如果是简单类型，那么返回this。
+        }
+
+
+        // 稳妥构造函数模式，要实现使用new构造一个对象和不使用new构造一个对象效果一样
+        var c1 = new Cat(); //构造函数调用模式
+        var c2 = Cat(); //函数调用模式
+        // 缺点：  不能溯源 原型、构造函数 、 对象的方法内存不能共享，浪费内存
+    </script>
+</body>
+</html>

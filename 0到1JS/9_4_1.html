@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>9.4</title>
+</head>
+    <script>
+        // 9.4.1
+        // window.onload=function add(){
+        //     var oDiv = document.getElementById("div1");
+        //     oDiv.style.color="green";
+        // }
+        // 9.4.2
+        window.onload=function(){
+            var oUl=document.getElementById("list");
+            var oLi=oUl.getElementsByTagName("li");
+            oLi[2].style.color="red";
+        }
+    </script>
+<body>
+    <div id="div1">JavaScript</div>
+    <ul id="list">
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+        <li>jQuery</li>
+        <li>Vue.js</li>
+    </ul>
+</body>
+</html>

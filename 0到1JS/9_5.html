@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>95</title>
+    <style type="text/css">
+        table {border-collapse: collapse;}
+        tr,td{
+            width: 80px;
+            height: 20px;
+            border: 2px solid gray;
+        }
+    </style>
+    <script>
+        // window.onload=function(){
+        //     var oDiv=document.getElementById("content");
+        //     var oStrong=document.createElement("strong");
+        //     var oTxt=document.createTextNode("绿叶学习网");
+        //     // 将文本节点插入strong元素
+        //     oStrong.appendChild(oTxt);
+        //     // 将strong元素插入div元素（这个div在HTML已经存在）
+        //     oDiv.appendChild(oStrong);
+        // }
+
+        // window.onload=function(){
+        //     var oInput=document.createElement("input");
+        //     oInput.id="submit";
+        //     oInput.type="button";
+        //     oInput.value="提交了哦";
+        //     document.body.appendChild(oInput);
+        // }
+
+        // window.onload=function(){
+        //     var oImg=document.createElement("img");
+        //     oImg.className="pic";
+        //     oImg.src="https://p1.ssl.qhimg.com/dmsmty/1080_1535_/t0148ed771aec1b5195.jpg";
+        //     oImg.style.border="10px solid silver";
+        //     document.body.appendChild(oImg);
+        // }
+
+        window.onload=function(){
+            // 动态创建表格
+            var oTable=document.createElement("table");
+            for(var i=0; i<3; i++){
+                var oTr=document.createElement("tr");
+                for(var j=0; j<3; j++){
+                    var oTd=document.createElement("td");
+                    oTr.appendChild(oTd);
+                }
+                oTable.appendChild(oTr);
+            }
+            // 添加到body中去
+            document.body.appendChild(oTable);
+        }
+    </script>
+</head>
+<body>
+    <div id="content"></div>
+</body>
+</html>

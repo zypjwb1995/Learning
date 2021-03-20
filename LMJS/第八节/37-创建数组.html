@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>创建数组</title>
+</head>
+<body>
+    <script>
+        var arr = new Array(); //创建一个空数组 :[]
+        // console.log(arr.toString());
+        arr[0] = 1;
+        arr[1] = 2;
+        arr[2] = 'sss';
+        console.log(arr);
+        console.log('length =' + ' ' + arr.length);
+
+        // 构造函数创建数组传递参数
+        var arr2 = new Array(4); //给构造函数传递数值类型，它认为是创建容量为数值的数组
+        arr2[0] = '123';
+        arr2[1] = '123';
+        arr2[2] = '123';
+        arr2[3] = '123';
+        arr2[4] = '123';
+        console.log(arr2);
+
+        // 创建数组的时候，顺便初始化数组的内容
+        var arr3 = new Array(1,2,3,'zyp','sg',true,[22,33]);
+        console.log(arr3); 
+        // 减小length值，相当于截断了数组
+        arr3.length = 3;
+        console.log(arr3); //只剩1 2 3
+        console.log(arr3.length); 
+    </script>
+</body>
+</html>

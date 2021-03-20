@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>相对定位</title>
+    <style>
+        body, div {
+            padding: 0;
+            margin: 0;
+        }
+        div {
+            border: 1px solid royalblue;
+        }
+        .r1 {
+            width: 200px;
+            height: 200px;
+            /* 设置了相对定位之后，标签的css就可以设置left，right，top，bottom的css属性 */
+            position: relative;
+            /* 相对于元素原来的位置，左移动10像素 */
+            /* left: 10px; */
+
+            /* 相对于元素正常文档流的位置的顶部20像素，即向下20像素 */
+            /* top: 20px; */
+
+            bottom: 20px;
+            right: 20px;
+        }
+
+        /* 绝对定位 */
+        .ab {
+            position: absolute;
+            left: 100px;
+            top: 50px;
+            height: 100px;
+            width: 200px;
+            background-color: #cda;
+        }
+        .parent {
+            width: 500px;
+            height: 400px;
+            background-color: #ca0;
+            float:right;
+            /* position: absolute;
+            top: 50px;
+            left: 250px; */
+        }
+        /* 一般 子绝父相 */
+        .p2 {
+            position: relative;
+            width: 1000px;
+            height: 500px;
+            background-color:bisque;
+        }
+    </style>
+</head>
+<body>
+    <div class="r1">
+        我是 div1
+    </div>
+    <div class="p2">
+        <div class="parent">
+            父容器
+            <div class="ab">
+                我是div2
+            </div>
+        </div>
+    </div>
+</body>
+</html>

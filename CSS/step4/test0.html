@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    .exciting-text::after {
+        content: "<- 让人兴兴兴奋!"; 
+        color: green;
+        /* visibility: hidden; */
+    }
+
+    .boring-text::after {
+        content:"<- 无聊!";
+        color: red;
+        /* visibility: hidden; */
+    }
+    .ribbon {
+      background-color: #5BC8F7;
+    }
+
+    .ribbon::after {
+      content: "Look at this orange box.";
+      background-color: #FFBA10;
+      border-color: black;
+      border-style: dotted;
+    }
+    span[data-descr] {
+      position: relative;
+      text-decoration: underline;
+      color: #00F;
+      cursor: help;
+    }
+
+    span[data-descr]:hover::after {
+      content: attr(data-descr);
+      position: absolute;
+      left: 0;
+      top: 24px;
+      min-width: 200px;
+      border: 1px #aaaaaa solid;
+      border-radius: 10px;
+      background-color: #ffffcc;
+      padding: 12px;
+      color: #000000;
+      font-size: 14px;
+      z-index: 1;
+    }
+    * {
+        box-sizing: border-box;
+    }
+
+    dl {
+        margin: 0;
+        padding: 24px 0 0 0;
+    }
+    dt {
+        background: #B8C1C8;
+        border-bottom: 1px solid #989EA4;
+        border-top: 1px solid #717D85;
+        color: #FFF;
+        font: bold 18px/21px Helvetica, Arial, sans-serif;
+        margin: 0;
+        padding: 2px 0 0 12px;
+        position: -webkit-sticky;
+        position: sticky;
+        top: -1px;
+    }
+
+    dd {
+        font: bold 20px/45px Helvetica, Arial, sans-serif;
+        margin: 0;
+        padding: 0 0 0 12px;
+        white-space: nowrap;
+    }
+
+    dd + dd {
+        border-top: 1px solid #CCC;
+    }
+    </style>
+</head>
+<body>
+    <p class="boring-text">这是些无聊的文字</p>
+    <p>这是不无聊也不有趣的文字</p>
+    <p class="exciting-text">在MDN上做贡献简单又轻松。按右上角的编辑按钮添加新示例或改进旧示例！</p>
+    <span class="ribbon">Notice where the orange box is.</span>
+    <p>这是上面代码的实现<br />
+        我们有一些 <span data-descr="collection of words and punctuation">文字</span> 有一些
+        <span data-descr="small popups which also hide again">提示</span>。<br />
+        把鼠标放上去<span data-descr="not to be taken literally">看看</span>.
+    </p>
+    <div>
+        <dl>
+          <dt>A</dt>
+          <dd>Andrew W.K.</dd>
+          <dd>Apparat</dd>
+          <dd>Arcade Fire</dd>
+          <dd>At The Drive-In</dd>
+          <dd>Aziz Ansari</dd>
+        </dl>
+        <dl>
+          <dt>C</dt>
+          <dd>Chromeo</dd>
+          <dd>Common</dd>
+          <dd>Converge</dd>
+          <dd>Crystal Castles</dd>
+          <dd>Cursive</dd>
+        </dl>
+        <dl>
+          <dt>E</dt>
+          <dd>Explosions In The Sky</dd>
+        </dl>
+        <dl>
+          <dt>T</dt>
+          <dd>Ted Leo & The Pharmacists</dd>
+          <dd>T-Pain</dd>
+          <dd>Thrice</dd>
+          <dd>TV On The Radio</dd>
+          <dd>Two Gallants</dd>
+        </dl>
+    </div>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>猫封装练习</title>
+</head>
+<body>
+    <script>
+        // var cat = new Object();
+        var cat = {
+            color: 'blue',
+            weight: 20,
+            name: 'hellokity',
+            ID: 123,
+            run: function() {
+                // this就相当于cat对象。在对象的方法中使用this代表当前的对象
+                console.log(this.name + ' 奔跑');
+            },
+            jump: function() {
+
+            }
+        };
+
+        cat.run();
+
+        // 输出所有猫的自定义属性
+        for(var k in cat){
+            console.log(k);
+        }
+    </script>
+    
+</body>
+</html>

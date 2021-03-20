@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>新浪综合练习</title>
+    <style>
+        body, div, ul, li {
+            padding: 0;margin: 0;
+        }
+        body {
+            font: 12px/20px "微软雅黑","宋体" ;
+        }
+        /* 去掉列表默认的样式 */
+        ul, li {
+            list-style: none;
+        }
+        a {
+            text-decoration:none;
+            color: #4c4c4c;
+        }
+
+        /* 设置顶部导航栏的通栏盒子 */
+        .tn {
+            border-top: 4px solid #ff8500;
+            border-bottom: 1px solid #edeef0;
+            height: 42px;
+            line-height: 42px;
+            /* 高度和行高保证了文字居中对齐 */
+        }
+        .tn-main {
+            margin: 0 auto;
+            width: 960px;
+
+        }
+
+        /* 设置左侧的导航 */
+        .tn-nav {
+            float: left;
+        }
+        .tn-nav li {
+            float: left;
+            padding: 0 15px;
+        }
+        .tn-nav li:hover,
+        .tn-nav li:hover a {
+            background-color: #edeef0;
+            color: #ff8500;
+        }
+        /* 设置右侧的导航 */
+        .tn-person {
+            float: right;
+        }
+        .tn-person > li {
+            float: left;
+            padding: 0 15px;
+        }
+        .tn-person > li:hover,
+        .tn-person > li:hover > a {
+            background-color: #edeef0;
+            color: #ff8500;
+        }
+
+        /*  */
+        .weibo-box {
+            display: none;
+            position: absolute;
+        }
+        .weibo:hover .weibo-box {
+            display: block;
+        }
+        .weibo-box li {
+            border: 1px solid #ff8500;
+            border-top: none;
+            width: 60px;
+            height: 31px;
+            line-height: 31px;
+            text-align: center;
+            margin-left: -15px;
+        }
+        .weibo-box a {
+            display: block;
+        }
+        .weibo-box li:hover, 
+        .weibo-box li a:hover{
+            background-color: #edeef0;
+            color: #ff8500;
+        }
+    </style>
+</head>
+<body>
+    <div class="tn">
+        <div class="tn-main">
+            <!-- 左侧网站导航 -->
+            <ul class="tn-nav">
+                <li><a href="#">新浪首页</a></li>
+                <li><a href="#">手机新浪网</a></li>
+                <li><a href="#">移动客户端</a></li>
+            </ul>
+            <!-- 右侧的网站用户导航 -->
+            <ul class="tn-person">
+                <li><a href="#">登录</a></li>
+                <li class="weibo">
+                    <a href="#">微博</a>
+                    <ul class="weibo-box">
+                        <li><a href="#">私信</a></li>
+                        <li><a href="#">评论</a></li>
+                        <li><a href="#">@我</a></li>
+                    </ul>
+                    <!-- <select>
+                        <option value="volvo">Volvo</option>
+                        <option value="saab">Saab</option>
+                        <option value="opel">Opel</option>
+                        <option value="audi">Audi</option>
+                      </select> -->
+                </li>
+                <li><a href="#">博客</a></li>
+                <li><a href="#">邮箱</a></li>
+                <li><a href="#">网站导航</a></li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

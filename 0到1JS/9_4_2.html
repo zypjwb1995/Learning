@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>9.4.2</title>
+    <script>
+        // window.onload=function(){
+        //     var arr=["HTML","CSS","JavaScript","jQuery","Vue.js"];
+        //     var oUl=document.getElementById("list");
+        //     var oLi=document.getElementsByTagName("li");
+        //     for(var i=0; i<oLi.length; i++){
+        //         oLi[i].innerHTML=arr[i];
+        //         oLi[i].style.color="red";
+        //     }
+        // }
+
+        window.onload=function(){
+            document.body.innerHTML="<input type='button' value='按钮'/><input type='button' value='按钮'/><input type='button' value='按钮'/>";
+            var oBtn=document.getElementsByTagName("input");
+            oBtn[0].onclick=function(){
+                alert("表单总元素个数为:"+oBtn.length+"个");
+            };
+            oBtn[1].onclick=function(){
+                alert("表单总元素个数为:"+oBtn.length+"个");
+            };
+            oBtn[2].onclick=function(){
+                alert("表单总元素个数为:"+oBtn.length+"个");
+            };
+        }
+    </script>
+</head>
+<body>
+    <!-- <ul id="list">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul> -->
+</body>
+</html>

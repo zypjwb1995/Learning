@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>9.9</title>
+    <script>
+        window.onload=function(){
+            var oBtn=document.getElementById("btn");
+            oBtn.onclick=function(){
+                // 获取body中的第1个元素
+                var oFirst=document.querySelector("body *:first-child");
+                // 获取2个文本框
+                var oTag=document.getElementById("tag");
+                var oTxt=document.getElementById("txt");
+                // 根据2个文本框的值来创建一个新节点
+                var oNewTag=document.createElement(oTag.value);
+                var oNewTxt=document.createTextNode(oTxt.value);
+                oNewTag.appendChild(oNewTxt);
+                document.body.replaceChild(oNewTag,oFirst);
+            }
+        }
+    </script>
+</head>
+<body>
+    <p>JavaScript</p>
+    <hr>
+    输入标签：<input type="text" id="tag"> <br>
+    输入内容：<input type="text" id="txt"> <br>
+    <input type="button" value="替换" id="btn">
+</body>
+</html>

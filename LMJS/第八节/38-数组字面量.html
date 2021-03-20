@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>数组字面量</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <script>
+        var a1 = [];
+        // 创建复杂数组
+        var a2 = [1,2,'ss',true,{age:20},null,undefined];
+        // 放对象，bealoon，null等都可以
+        // console.log(a1);
+        console.log(a2);
+
+        var a3 = [2, ,3];
+        console.log(a3);
+
+        // 这种方式最多，推荐这么使用.
+
+        console.log(a3[0]); //索引从0开始，所有开发语言的数组都是从0开始
+    </script>
+</body>
+</html>

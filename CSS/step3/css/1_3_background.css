@@ -1,0 +1,22 @@
+html,
+body {
+    height: 100%;
+}
+body {
+    margin: 0; padding: 0;
+}
+div {
+    height: 100%;
+    background-image: url('../img/BackgroundFront.png'), url('../img/BackgroundBack.png');
+
+    background-size: 100% 250px;
+    background-repeat: no-repeat;
+
+    /* background-position: left center, left top; */
+    background-position: left center;
+    /* background-position: center; */
+    background-attachment: fixed;
+}
+p {
+    height: 2000px;
+}

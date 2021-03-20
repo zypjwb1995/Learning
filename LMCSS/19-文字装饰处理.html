@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>文字装饰</title>
+    <style>
+        /* 去掉下划线 */
+        ul > li > a {
+            text-decoration: none;
+            /* text-decoration: line-through; */
+        }
+        /* 去掉删除线 */
+        s {
+            text-align: none;
+            /* text-decoration: overline; */
+            /* text-decoration: underline; */
+        }
+        /* 添加下划线和删除线 */
+        p {
+            text-decoration: underline overline line-through;
+            text-indent: 2em;
+        }
+        p.pre {
+            text-decoration: none;
+            white-space: pre;
+        }
+        p.p3 {
+            text-decoration: none;
+            border: 1px solid #000;
+            width: 200px;
+            height: 100px;
+            /* 不换行 */
+            white-space: nowrap;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li><a href="#">货拉拉女乘客之死：诸多疑团待解</a></li>
+        <li><a href="#">中纪委3天打2虎 “种树市长”落马</a></li>
+        <li><a href="#">外交部谈涉非“债务陷阱”：中方从不逼债</a></li>
+    </ul>
+    <s>删除线</s>
+    <p>
+        段落来了 货拉拉女乘客之死：诸多疑团待解货拉拉女乘客之死：诸多疑团待解货拉拉女乘客之死：诸多疑团待解货拉拉女乘客之死：诸多疑团待解货拉拉女乘客之死：诸多疑团待解货拉拉女乘客之死：诸多疑团待解货拉拉女乘客之死：诸多疑团待解货拉拉女乘客之死：诸多疑团待解货拉拉女乘客之死：诸多疑团待解
+    </p>
+    <p class="pre">
+        var t = 19;
+        var n = t * 9;
+        console.log(n);
+    </p>
+    <p class="p3">
+        段落来了 货拉拉女乘客之死：诸多疑团待解货拉拉女乘客之死：诸多疑团待解货拉拉女乘客之死：诸多疑团待解货拉拉女乘客之死：诸多疑团待解货拉拉女乘客之死：诸多疑团待解货拉拉女乘客之死：诸多疑团待解货拉拉女乘客之死：诸多疑团待解货拉拉女乘客之死：诸多疑团待解货拉拉女乘客之死：诸多疑团待解
+    </p>
+</body>
+</html>

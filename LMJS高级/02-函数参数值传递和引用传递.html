@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>02</title>
+    <script>
+        var a=9,
+        b={name: 'xiaozheng', age: 26};
+
+        function demo(c1,c2){
+            c1=29;
+            c2.name='123';
+        }
+        // 把a，b分别传给 c1和c2.
+        // 函数的参数：如果是简单类型，会做一个值类型的数值副本传到函数内部。
+        // 如果参数是引用类型，会将引用类型的地址复制给传入函数的参数。
+
+        demo(a,b);
+
+        console.log(a); // a => 9
+        console.log(b); // b.name => '123'
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>字符统计练习</title>
+</head>
+<body>
+    <script>
+        // 判断一个字符串中出现次数最多的字符，统计这个次数
+        var  t = "abcdabkddabda";
+
+        // 遍历字符串中的每个字符，然后把字符当做对象的属性名，然后给对象添加属性
+        // 添加属性前，先判断是否存在属性，如果存在，那么就让属性的属性值+1
+        // 不存在，那么属性值=1
+        var h = {};
+        for(var i = 0; i < t.length; i++){
+            var charStr = t[i];
+            if(charStr in h) {
+                h[charStr] += 1;
+            }else {
+                h[charStr] = 1;
+            }
+        }
+
+        var max = 0,maxChar = '';
+        for(var k in h){
+            if(h[k] > max){
+                max = h[k];
+                maxChar = k;
+            }
+        }
+
+        console.log(max + ' ' + maxChar); 
+    </script>
+</body>
+</html>

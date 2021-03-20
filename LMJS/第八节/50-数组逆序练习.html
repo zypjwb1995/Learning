@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>数组逆序练习</title>
+</head>
+<body>
+    <script>
+        var t = [1 , 2, 3, 4, 5, 6, 7, 8];
+
+        console.log(t);
+
+        // 第一种： javascript的array数组自带的反序方法：
+        // t.reverse();
+        // console.log(t);
+
+        // 不用reverse方法，自己使用循环实现逆序
+        // 第二种方法：创建一个新数组，逆序之间存放原数组的数据
+        // var arr = new Array(t.length);
+        // for(var i = 0 ; i < t.length; i++){
+        //     arr[t.length-i-1] = t[i];
+        // }
+        // console.log(arr);
+        // var arr = new Array(t.length);
+        // for(var i=t.length-1 , k=0; i>=0; i--, k++){
+        //     arr[k] = t[i];
+        // }
+        // console.log(arr);
+
+        // 第三种：不增加数组的情况下
+        for(var i = 0; i < t.length/2; i++){
+            // t[i]  t[t.length-i-i]
+            var temp = t[i];
+            t[i] = t[t.length-i-1];
+            t[t.length - 1 - i] = temp;
+
+        }
+        console.log(t);
+    </script>
+</body>
+</html>

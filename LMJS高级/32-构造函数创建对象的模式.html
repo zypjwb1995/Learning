@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>构造函数创建对象的模式</title>
+</head>
+<body>
+    <script>
+        function Cat(age, name){
+            this.age = age;
+            this.name = name;
+            this.run = function(){
+                console.log(this.name + ' is running....');
+            };
+
+            // 当使用new来调用构造函数时
+            // 1、创建一个空对象
+            // 2、把空对象赋值给this
+            // 3、执行构造函数的里面代码，并给this的属性做赋值初始化
+            // 4、把新创建的对象返回(如果有返回值，返回值是简单类型会直接忽略，还是返回this；如果是引用类型直接返回引用对象)
+        }
+
+        // 通过构造函数创建一个对象。
+        var c1 = new Cat(19, 'cc');
+        c1.age = 20; //修改对象的属性
+        c1.run();
+
+        // 优点：
+        // 1、创建对象的时候默认初始化一些属性。
+        // 2、可以使用instanceof追溯对象的原型及构造函数。
+        // c1 instanceof Cat; //true
+        console.log(c1 instanceof Cat);
+        console.log(c1.constructor === Cat);
+
+        var c1 = new Cat(19, '(宝ᴗ宝)');
+        // 缺点：
+        // 1、对象的方法不能重复使用，每个对象里面面都要存储一份方法对象。浪费内存
+    </script>
+</body>
+</html>

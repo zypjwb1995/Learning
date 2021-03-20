@@ -1,0 +1,76 @@
+html,body{
+    height: 100%;
+}
+body{
+    margin: 0 auto;width: 90%;
+}
+aside{
+    width: 50%;height: 80%;float: left;padding-top: 14%;
+    box-sizing: border-box;
+}
+body::after{
+    content: ''; display: block;visibility: hidden;clear: both;
+}
+a{
+    text-decoration: none;
+}
+p strong{
+    display: block;
+}
+p{
+    font-size: 14px;
+}
+aside:first-of-type{
+    padding-right: 5%;
+}
+aside:first-of-type footer{
+    color: #6800ff;
+}
+/* *left Aside Fin */
+
+
+aside:last-of-type ul{
+    margin: 0;padding: 0;
+}
+aside:last-of-type ul li{
+    padding: 10px 5%;display: block;text-align: right;
+    transition-duration: 1s;
+    overflow: hidden;font-size: 12px;
+}
+aside:last-of-type ul li:hover{
+    padding: 5%;cursor: pointer;/* 鼠标手势 */
+}
+aside:last-of-type ul li a{
+    color: white;
+}
+aside:last-of-type ul li a::before{
+    content: '+';
+}
+aside:last-of-type ul li:hover a{
+    color: black;
+}
+aside:last-of-type ul li:hover a::before{
+    content: '>';
+}
+
+
+aside:last-of-type ul li:nth-child(1){background-color: red;}
+aside:last-of-type ul li:nth-child(2){background-color: orangered;}
+aside:last-of-type ul li:nth-child(3){background-color: yellow;}
+aside:last-of-type ul li:nth-child(4){background-color: green;}
+aside:last-of-type ul li:nth-child(5){background-color:#7c8aff;}
+aside:last-of-type ul li:nth-child(6){background-color: blue;}
+aside:last-of-type ul li:nth-child(7){background-color: purple;}
+
+aside:last-of-type ul li p{
+    width: 80%;float: left;opacity: 0;
+    height: 0;/* */ 
+    transition-duration: 1s,1.5s;
+    transition-timing-function: ease-in-out;
+    transition-property: height,opacity;
+}
+aside:last-of-type ul li:hover p{
+    height: 220px;opacity: 1;
+}
+
+/* *right aside fin */

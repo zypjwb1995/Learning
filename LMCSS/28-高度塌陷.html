@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>高度塌陷</title>
+    <style>
+        div {
+            border: 1px solid purple;;
+        }
+        .child {
+            background-color: #cda;
+            width: 100px;
+            height: 100px;
+
+            float: left;
+        }
+        div.child:last-child{
+            height: 500px;
+        }
+        .parent {
+            overflow:hidden;
+            /* 高度塌陷问题，解决，包裹。 */
+        }
+        p {
+            border: 1px solid green;
+            width: 200px;
+            height: 200px;
+            overflow: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div class="child">1</div>
+        <div class="child">2</div>
+        <div class="child">3 </div>
+    </div>
+
+    <p>
+        原标题：拜登向台湾求“芯”？美高官这么说
+
+        　　[文/观察者网 张晨静]全球缺芯问题直接损害美国汽车制造业在内等多个行业；美国医护人员物资紧缺却要眼巴巴等着外国供应；全球关键物资运输严重中断……疫情期间所暴露出的这些问题，让美国政府觉得“危机重重”，总统拜登决定出手解决此事。
+
+        　　当地时间2月24日，拜登签署了一项行政令，指示联邦机构对包括半导体芯片、电动汽车大容量电池、稀土矿物质、药品这4种关键产品的供应链进行为期100天的审查，且还要对6个经济领域的供应链进行为期1年的单独审查。
+        
+        　　《纽约时报》报道称，此举旨在促进美国内生产，避免疫情期间再出现关键商品短缺问题。尽管行政令并未针对任何特定国家，但报道认为，这是拜登政府为与中国经济竞争而做出的一次“前期攻击”。
+    </p>
+</body>
+</html>

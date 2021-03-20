@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <script>
+        //splice方法如果只传入一个参数，那么就从这个参数开始删除到数组的结尾。
+        var t = [0,1,2,3,4,5,6,7];
+        // var a1 = t.splice(3);
+        // console.log(t);
+        // console.log(a1); [3,4,5]
+
+        // 传递两个参数：起始索引, 要删除的个数
+        // var a2 = t.splice(3,1);
+        // console.log(t);
+        // console.log(a2);
+
+        // var a3 = t.splice(3, 2,'第一个插入','第二个插入元素');
+        // 0 1 2 '第一个插入','第二个插入元素' 5 6 7
+        // console.log(a3);
+        // console.log(t);
+
+        // var a4 = t.splice(3, 0,'第一个插入','第二个插入元素');
+        // 0 1 2 '第一个插入','第二个插入元素' 3 4 5 6 7
+        // console.log(t);
+        // console.log(a4);
+
+        // 替换数组中的3 为'a'
+        t.splice(3,1,'a');
+        console.log(t);
+    </script>
+</body>
+</html>

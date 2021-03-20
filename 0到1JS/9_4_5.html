@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>945</title>
+    <script>
+        // window.onload=function(){
+        //     var oInput=document.getElementsByName("status");
+        //     oInput[0].checked=true;
+        // }
+        window.onload=function(){
+            var oInput=document.getElementsByName("fruit");
+            for(var i=0; i<oInput.length; i++){
+                oInput[i].checked=true;
+            };
+        }
+    </script>
+</head>
+<body>
+    你的最高学历：
+    <label><input type="radio" name="status" value="本科">本科</label> 
+    <label><input type="radio" name="status" value="硕士">硕士</label>
+    <label><input type="radio" name="status" value="博士">博士</label>
+    <br>
+    <label><input type="checkbox" name="fruit" value="苹果">苹果</label>
+    <label><input type="checkbox" name="fruit" value="香蕉">香蕉</label>
+    <label><input type="checkbox" name="fruit" value="西瓜">西瓜</label>
+</body>
+</html>

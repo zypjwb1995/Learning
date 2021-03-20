@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>对象字面量</title>
+</head>
+<body>
+    <script>
+        // 创建对象的第二种方式： 字面量的方式
+        // 也称为使用JSON对象的方式。
+        var t = {
+            age: 27,
+            name: "Nick",
+            run: function(){
+                console.log("跑路了！");
+            }
+        };
+
+        t.color = "yellow";
+
+        console.log(t.age);
+        t.run(); //执行t对象中的run方法，如果一个对象的属性是函数，我们就称之为方法。
+        t.age = 20;
+        console.log(t.age);
+    </script>
+</body>
+</html>

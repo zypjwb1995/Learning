@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>call和apply调用模式</title>
+</head>
+<body>
+    <script>
+        // call 和 apply调用模式
+
+        function sum(a, b){
+            console.log(this);
+            return a + b;
+        }
+
+        sum(1,2); //this => window
+        
+        var t = {
+            name: 'laozheng'
+        };
+        // 函数.call(fContext,p1,p2......)
+        var m = sum.call(t,2,3,9,10);
+        console.log(m);
+
+        var m2 = sum.apply(t,[1,2]);
+        console.log(m2);
+
+
+        // 如果你传递的第一个参数是简单类型（值类型，原始类型），那么都会出现一些变化
+        // 如果传递的No.1参数是：null,string,boolean转成对应的包装类型
+        // 如果是number、string、boolean转成对应的包装类型
+        sum.call(null,3,3,5);
+        sum.call(undefined,3,3,5);
+        sum.call(2,3,3,5);
+    </script>
+</body>
+</html>

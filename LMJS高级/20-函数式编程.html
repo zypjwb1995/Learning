@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>函数式编程</title>
+</head>
+<body>
+    <script>
+        // Array.prototype.sort 可以对数组中的元素进行排序。
+        // 排序的算法是根据字符串比较大小的算法进行排序
+        // 不适合于数字的排序
+
+        var t = [48,2,33,4,55,9,888];
+        console.log(t);
+        console.log(t.sort());
+
+        // 按照数值大小进行排序。
+        t.sort(function(a,b) {
+            // 如果a > b return大于 0的值
+            // a === b,return 0
+            // a < b ,return 小于0的值
+            return a - b;
+        });
+        // 这便是函数式编程，一个函数作为另一个函数的输入。把函数当成了另一个函数的变量。
+        console.log(t);
+    </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>数组切片方法</title>
+</head>
+<body>
+    <script>
+        var t = [0, 1, 2, 3, 4, 5];
+        console.log(t);
+
+        var a1 = t.slice(2); //从索引位置2开始截取到数组最后。
+        console.log(a1);
+
+        var a2 = t.slice(2,5);
+        console.log(a2);
+        console.log(t); //对原数组没有影响
+
+        // 如果传递的是负数，那么从数组结尾开始计算， 但是不要用。
+        var a3 = t.slice(-3,-1);
+        console.log(a3);
+
+    </script>
+</body>
+</html>

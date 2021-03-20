@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>9.6.1</title>
+    <script>
+        window.onload=function(){
+            var oBtn=document.getElementById("btn");
+            // 为按钮添加点击事件
+            oBtn.onclick=function(){
+                var oUl=document.getElementById("list");
+                var oTxt=document.getElementById("txt");
+                // 动态创建一个li元素
+                var textNode=document.createTextNode(oTxt.value);
+                var oLi=document.createElement("li");
+                // 将文本节点插入li元素中去
+                oLi.appendChild(textNode);
+                // 将li元素插入ul元素中去
+                oUl.appendChild(oLi);
+            }
+        }
+    </script>
+</head>
+<body>
+    <ul id="list">
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+    </ul>
+    <input type="text" id="txt" /><input type="button" id="btn" value="插入" />
+</body>
+</html>

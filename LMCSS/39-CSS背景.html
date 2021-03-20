@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>背景</title>
+    <style>
+        .bg {
+            height: 400px;
+            width: 400px;
+            border: 1px solid saddlebrown;
+            /* 背景色 */
+            background-color: #cda;
+            /* 背景图片,优先级高于背景色 */
+            background-image: url('https://sgp1.digitaloceanspaces.com/tz-mag-my/wp-content/uploads/2019/08/060608082121/pasted-image-0-770x513.jpg');
+        }
+        .bg2 {
+            height: 400px;
+            width: 400px;
+            border: 1px solid saddlebrown;
+            background-image: url('https://lh3.googleusercontent.com/proxy/cj1FR6bAx1O3cDdCAxha-NmMVh8cnGFrBZyZVTKIxgYKba3DWYAer8UBKtLus6VE4gziCayOfb-2xX7U-zL4qYOZbqjSiYhhzsaLbRs');
+            /* background-repeat: repeat-x; */
+            /* background-repeat: repeat-y; */
+            /* 默认就是横纵向都平铺 */
+            background-repeat: no-repeat;
+            padding-left: 200px;
+            /* background-repeat: inherit; */
+            /* 从父容器继承 repeat属性 */
+        }
+    </style>
+</head>
+<body>
+    <div class="bg"></div>
+    <div class="bg2">一小段文字</div>
+</body>
+</html>

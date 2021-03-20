@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body, div {
+            margin: 0; padding: 0;
+        }
+        div {
+            border: 1px solid saddlebrown;
+        }
+        .head, .foot, .center {
+            margin: 0 auto;
+            width: 960px;
+        }
+        .center {
+            overflow: hidden;
+        }
+        .left, .right, .main {
+            float: left;
+            height: 500px;
+        }
+        .left, .right{
+            width: 200px;
+        }
+        .main {
+            width: 550px;
+            margin: 0 2px;
+        }
+    </style>
+</head>
+<body>
+    <div class="head">顶部</div>
+    <div class="center">
+        <div class="left">左侧</div>
+        <div class="main">中间</div>
+        <div class="right">右侧</div>
+    </div>
+    <div class="foot">底部</div>
+</body>
+</html>

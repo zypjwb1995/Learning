@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>案例1</title>
+    <style>
+        body, div, p {
+            padding: 0;margin: 0;
+        }
+        div {
+            border: 1px solid lawngreen;
+        }
+        .top-nav {
+            height: 100px;width: 960px;
+            margin: 0 auto;
+        }
+        .main {
+            width: 960px;
+            margin: 0 auto;
+            overflow: hidden;  /* 包裹起来 */
+            /* ! */
+        }
+        .left-bar {
+            float: left;
+            width: 200px;
+            height: 300px;
+        }
+        .content {
+            float: left;
+            width: 756px;
+            height: 500px;
+        }
+        .foot {
+            margin: 0 auto;
+            width: 960px;
+        }
+    </style>
+</head>
+<body>
+    <div class="top-nav">头部</div>
+    <div class="main">
+        <div class="left-bar">左边栏</div>
+        <div class="content">内容</div>
+    </div>
+    <div class="foot">底部</div>
+</body>
+</html>

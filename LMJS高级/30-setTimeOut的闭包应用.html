@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>setTimeOut的闭包应用</title>
+</head>
+<body>
+    <script>
+
+        // 经过多少毫秒后，执行回调函数。
+        // bom的一个方法，接受两个参数：第一个参数是回调函数。
+        // 第二个参数是经过的毫秒数。
+        // setTimeout(function() {
+        //     // 1000ms后，执行当前函数体
+        //     console.log('sss');
+        // },1000);
+
+        for(var i = 0; i < 10; i++){
+            setTimeout(function() {
+                console.log(i);
+            },1000)
+        }
+    </script>
+</body>
+</html>

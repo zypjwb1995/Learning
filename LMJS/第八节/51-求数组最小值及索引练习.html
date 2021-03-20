@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>求数组的最小值及索引</title>
+</head>
+<body>
+    <script>
+        var t = [50,21,15,3,65,999,111,120,114];
+        var min = t[0],
+            n = 0;
+        for (var i = 0; i < t.length; i++){
+            if(t[i] < min){
+            min = t[i];
+            n = i;
+            }
+        }
+        console.log('zuixiaozhi:' + min + 'suoyin:' + n);
+    </script>
+</body>
+</html>

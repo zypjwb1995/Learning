@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>冒泡排序算法</title>
+</head>
+<body>
+    <script>
+        var t = [33,2,9,19,7,6,34,22,30];
+        console.log(t);
+        // 冒泡排序
+
+        // 循环控制趟数， i是趟数-1
+        for(var i = 0; i < t.length - 1; i++ ){
+            // 每一趟里，要对比所有的数据进行交换，把大的值交换到后面的位置。
+            for(var k = 0; k < t.length - 1 - i; k++){
+                // 判断大小,交换
+                if(t[k] > t[k+1]){
+                    var temp = t[k];
+                    t[k] = t[k+1];
+                    t[k+1] = temp;
+                }
+            }
+        }
+        console.log(t);
+    </script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>闭合浮动</title>
+    <style>
+        body, div {
+            padding: 0; margin: 0;
+        }
+        div {
+            border: 1px solid red;
+        }
+        .fl {
+            float: right;
+            height: 100px;
+            width: 100px;
+            background-color: #cda;
+        }
+        .clearfix::after, .clearfix::before {
+            content: " ";
+             /* opera 浏览bug , so要写空格*/
+            display: table;
+        }
+        .clearfix::after {
+            clear: both;
+        }
+        .clearfix {
+            zoom: 1;
+             /* *是为了兼容IE6，7 */
+        }
+    </style>
+</head>
+<body>
+    <div class="clearfix">
+        <div class="fl">浮动的盒子</div>
+        　路透社于当地时间2月26日报道，马里军方当日发布声明称当地时间2月25日晚，马里中部小镇邦贾加拉（Bandiagara）的一个军事哨所及一个军事基地遭到两起袭击，造成8人死亡，5人受伤。袭击者烧损了基地建筑，并偷走了一批武器和四辆车。马里军方表示目前为止并不确定袭击者的身份。
+    </div>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>检测合法值数组案例</title>
+</head>
+<body>
+    <script>
+        var t = [1,4,9,'sss',3,'2',2,3,2,1];
+        var rightfulNum = 0,
+            illNum = 0;        
+            //  switch优化版本 -->
+        for (var k in t) {
+            switch(t[k]) {
+                case 1:
+                case 2:
+                case 3:
+                    rightfulNum += 1;
+                    break;
+                default :
+                illNum += 1;
+            }
+        }
+        console.log('合法: ' + rightfulNum);
+        console.log('非法: ' + illNum);
+    </script>
+</body>
+</html>
