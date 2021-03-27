@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>模块化演变</title>
+</head>
+<body>
+    <script>
+        // function demo() {
+        //     var a = b = c = 9; 
+        //     // 如果变量没有声明直接拿来用那么就相当于直接声明了全局变量
+        // }
+        // demo();
+        // console.log(b);
+
+        // // a.js
+        // var m = 0;
+        // console.log(m);
+        // // b.js
+        // var m = 'ssss';
+        // 变量冲突 是 团队合作噩梦
+
+        // 第一个尝试：命名空间
+        // a.js 老马
+        var Shop = {}; //顶层命名空间
+        Shop.User = {}; //电商的用户模块
+        Shop.User.UserList = {}; //用户列表页面模块。
+        Shop.User.UserList.length = 19; //用户一共有19个
+        
+        Shop.User.UserDetail = {};
+        Shop.User.UserDetail.length = 20;
+        console.log(Shop.User.UserDetail.length);
+        console.log(Shop.User.UserList.length);
+
+        // 给单个文件里面定义的局部变量都变成 局部作用域里面的变量。
+        // 第二个尝试:
+        (function() {
+            window.Shop = {};
+            window.Shop.User = {};
+            // window.Shop.UserDetail.length;
+        })();
+
+        
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>私有属性</title>
+</head>
+<body>
+    <script>
+        
+        function Persion() {
+            var age = 0;
+            this.getAge = function() {
+                return age;
+            }
+
+            this.setAge = function(a) {
+                age = a;
+            }
+        }
+
+        var p = new Persion();
+
+        p.setAge(90);
+        // 访问p的年龄
+        console.log(p.getAge());
+
+/*        // 第二种模拟私有变量的方式
+        function Persion() {
+            var age = 0;
+
+            return {
+                getAge: function() {
+                    return age;
+                },
+                setAge: function(num){
+                    age = num;
+                }
+            }
+        }
+
+        var p = Persion();
+        p.setAge(20);
+        console.log(p.getAge());*/
+    </script>
+</body>
+</html>
