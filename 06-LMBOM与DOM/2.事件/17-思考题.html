@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>思考题</title>
+</head>
+<body>
+    <input type="button" value="添加" id="btnAdd">
+    <ul class="list"></ul>
+    <script>
+        // var btnAdd = document.querySelector('#btnAdd');
+        // var Arr = ['123','水果','hqoytrh','1654198','数组字符串5','数组字符串6'];
+        // var index = 1;
+        // btnAdd.addEventListener('click', function() {
+        //     //拿到ul标签
+        //     var list = document.querySelector('.list');
+
+        //     list.innerHTML += "<li>" + Arr[index] + "</li>";
+        //     index ++;
+        // }); 
+
+        var btnAdd = document.querySelector('#btnAdd');
+        var arr = ['123','水果','hqoytrh','1654198','数组字符串5','数组字符串6','数组字符串7'];
+        btnAdd.addEventListener('click', function() {
+            var arrlist = document.querySelector('.list');
+            for (var index = 0; index < arr.length; index++) {
+                var ele = arr[index];
+                arrlist.innerHTML += "<li>" + ele + "</li>";
+            }
+        }); 
+        
+    </script>
+</body>
+</html>

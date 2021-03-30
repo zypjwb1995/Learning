@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>五角星点击案例</title>
+    <style>
+        span {
+            font-size: 30px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="wjx-wrap">
+        <span>☆</span>
+        <span>☆</span>
+        <span>☆</span>
+        <span>☆</span>
+        <span>☆</span>
+    </div>
+    <script>
+        var wjxList = document.querySelectorAll('.wjx-wrap span');
+
+        // 三个参数： 当前元素、索引、对象
+        // wjxList.forEach(function(element, index) {
+        //     element.addEventListener('click', function() {
+        //         wjxList.forEach(function(wjx, index){
+        //             wjx.innerHTML = '☆';
+        //         });
+        //     element.innerHTML = '★';
+        //     });
+        // });
+
+        // 注意内存消耗问题
+        wjxList.forEach(function(element, index) {
+            element.addEventListener('click', wjxClickHandler);
+        });
+
+        // 五角星事件的处理程序
+        function wjxClickHandler() {
+            // 
+            wjxList.forEach(function(wjx, index){
+                wjx.innerHTML = '☆';
+            });
+            // element.innerHTML = '★';
+            // 在时间处理函数的作用域中，this就指向当前注册事件的标签元素。
+            this.innerHTML = '㈀';
+        }
+
+
+    </script>
+</body>
+</html>

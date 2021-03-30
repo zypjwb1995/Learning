@@ -42,7 +42,45 @@
             // window.Shop.UserDetail.length;
         })();
 
-        
+        // 第三种尝试： 希望能把自己基类的很多工具封装一个整体的框架
+        // btn \ form \ animate
+
+        // laoma.js
+        (function() {
+            // 判断laoma框架是否存在，不存在初始化一下。
+            if(!w.laoma) {
+                w.laoma = {};
+            }
+
+            w.laoma.Btn = {
+                getVal: function() {
+                    console.log('val');
+                },
+                setVal: function(str) {
+                    console.log('setvale');
+                }
+            };
+
+            // window.laoma = laoma; //把老马对象传递给window全局变量。
+        })(window || {});
+
+        // laoma.animate.js
+        // 动画组件
+        (function() {
+            if(window.laoma) {
+                window.laoma = {};
+            }
+            window.laoma.animate = {};
+        })(window || {});
+
+         // laoma.form.js
+        // FORM组件
+        (function() {
+            if(window.laoma) {
+                window.laoma = {};
+            }
+            window.laoma.form = {};
+        })(window || {});
 
     </script>
 </body>
