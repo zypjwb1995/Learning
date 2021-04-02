@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>阻止默认行为</title>
+</head>
+<body>
+    <a href="http://aicoder.com" id="link">fighting</a>
+    <script>
+        var link = document.getElementById('link');
+        link.onclick = function(e) {
+            e = e || window.event; //兼容处理事件对象
+            // 标准浏览器
+            if(e.preventDefault) {
+                e.preventDefault(); //阻止默认
+            } else {
+                e.returnValue = false;
+            }
+
+            return false; //返回值给一个false, 非常有用，也可以实现阻止默认行为的效果。
+        };
+    </script>
+</body>
+</html>
