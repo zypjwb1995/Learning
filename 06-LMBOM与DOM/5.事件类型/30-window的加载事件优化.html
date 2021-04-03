@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>30-window的加载事件优化.html</title>
+    <script>
+        
+        // 兼容一下，标准浏览器和ie 在文档加载完成后就立即绑定事件。
+        // ie9以上才支持。
+        // document.addEventListener('DOMContentLoaded', function(e){
+        //     console.log('DOMContentLoaded');
+        //     // 给按钮绑定事件
+        //     var btn = document.getElementById('btn');
+        //     btn.addEventListener('click', function(){
+        //         alert('ok');
+        //     },false);
+        // },false)
+
+        // document.onDOMContentLoaded = function(){}; //
+
+        // 所有的窗口中元素都加载完成后才触发（不包括ajax请求的内容）
+        // window.onload = function() {
+        //     console.log('window.onload');
+        // };
+
+        // ie8 文档加载完成后就立即绑定dom事件
+        // document.onreadystatechange = function(e) {
+        //     console.log(document.readyState);
+        //     if(document.readyState == "interactive") {
+        //         var btn = document.getElementById('btn');
+        //         btn.onclick = function() {
+        //             alert('ok');
+        //         }
+        //     }
+        // }
+
+        document.myReady = function(callback) {
+            // 封装标准浏览器和ie浏览器
+            if(document.addEventListener) {
+                document.addEventListener('DOMContentLoaded', callback, false);
+            } else if(document.attachEvent){
+                // 兼容 IE8及一下的浏览器
+                document.attachEvent('onreadystatechange', function(){
+                    // 当文档的状态变为：interactive便是，文档dom对象可以进行访问。
+                    if(document.readyState == 'interactive') {
+                        callback(window.event);
+                    }
+                });
+            } else {
+                window.onload = callback;
+            }
+        };
+
+        document.myReady(function() {
+            // 注册事件
+            var btn = document.getElementById('btn');
+            btn.onclick = function() {
+                alert('ok2');
+            };
+        });
+
+    </script>
+</head>
+<body>
+    <input type="button" value="点击" id="btn">
+
+</body>
+</html>

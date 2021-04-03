@@ -7,13 +7,18 @@
     <title>onload事件</title>
 </head>
 <body>
-    <input type="button" value="点击" id="btn">  
     <script>
-        var btn = document.getElementById('btn');  //btn === null
-        btn.onclick = function() {
-            console.log('ok');
-            alert('1');
+        
+        // 页面的内容全部加载完成之后，才触发次事件
+        window.onload = function () {
+            
+            var btn = document.getElementById('btn');  //btn === null
+            btn.onclick = function() {
+                console.log('ok');
+                alert('1');
+            };
         };
-    </script>
+        </script>
+        <input type="button" value="点击" id="btn">  
 </body>
 </html>
