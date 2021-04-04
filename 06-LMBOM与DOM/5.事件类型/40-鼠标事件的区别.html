@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>鼠标事件的区别</title>
+    <style>
+        div {
+            border: 1px solid #ccc;
+        }
+        p {
+            margin: 20px;
+            border: 1px solid skyblue;
+        }
+    </style>
+</head>
+<body>
+    <div class="box" id="box">
+        <p> 京东数科拉法基阿斯利康 </p>
+        <p> 京东数科拉法基阿斯利康 </p>
+        <p> 京东数科拉法基阿斯利康 </p>
+        <p> 京东数科拉法基阿斯利康 </p>
+        <p> 京东数科拉法基阿斯利康 </p>
+        <p> 京东数科拉法基阿斯利康 </p>
+        <p> qq 811463358 </p>
+    </div>
+
+    <script>
+        (function(){
+            window.onload = function() {
+                var box = document.querySelector(".box");
+                box.onmousedown = function() {
+                    console.log('mousedown');
+                };
+                box.onmouseup = function() {
+                    console.log('mouseup');
+                };
+                box.onclick = function() {
+                    console.log('click');
+                };            
+
+                box.onmouseenter = function() {
+                    console.log('mouseenter');
+                };
+
+                box.onmouseleave = function() {
+                    console.log('mouseleave');
+                };
+
+                box.onmouseover = function(e) {
+                    console.log('over');
+                };
+
+                box.onmouseout = function(e) {
+                    console.log('out');
+                }
+            };
+
+            // document.onDOMContentLoaded = function(){};
+            // document.onreadystatechange
+        })();
+    </script>
+</body>
+</html>
