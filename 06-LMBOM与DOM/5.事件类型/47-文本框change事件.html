@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>change事件</title>
+    <script src="../js/documentReady.js"></script>
+</head>
+
+<body>
+    用户名：<input type="text" id="txtName">
+    <input type="button" value="提交">
+
+    <script>
+        (function () {
+            document.myReady(function () {
+                var txtName = document.getElementById('txtName');
+                txtName.onchange = function() {
+                    // 判断一下文本框的长度是否为6-8，不是则提醒用户
+                    //文本框获得焦点
+                    if (this.value.length > 8 || this.value.length < 6) {
+                        alert('用户名必须是6-8个字符');
+                        this.focus();
+                    }
+                }; //end for onchange
+            }); // end for myReady
+        })();
+    </script>
+</body>
+
+</html>
